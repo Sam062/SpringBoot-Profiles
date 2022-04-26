@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active:
+    - qa
+
+---
+spring:
+  datasource:
+    username: DEV_USERNAME 
+    password: DEV_PASSWORD 
+    url: DEV_URL
+    driver-class-name: DEV_DRIVER
+  config:
+    activate:
+      on-profile: dev
+---   
+
+spring:
+  datasource:
+    username: QA_USERNAME 
+    password: QA_PASSWORD 
+    url: QA_URL
+    driver-class-name: QA_DRIVER
+  config:
+    activate:
+      on-profile: dev
